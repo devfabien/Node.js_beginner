@@ -11,3 +11,7 @@ readStream.on("data", (chunk) => {
   writeStream.write("\nNew Chunk\n");
   writeStream.write(chunk);
 });
+
+//Also you can write a stream using pipes
+
+//readStream.pipe(writeStream)
