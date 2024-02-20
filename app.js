@@ -10,4 +10,9 @@ app.get("/about", (req, res) => {
   res.sendFile("./views/about.html", { root: __dirname });
 });
 
+// redirects
+app.get("/about-me", (req, res) => {
+  res.redirect("/about");
+});
+
 app.listen(3007);
