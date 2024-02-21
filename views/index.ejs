@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devfabien Blogs| <%= title %></title>
+    <link href="/output.css" rel="stylesheet">
+</head>
+<body class="bg-black">
+    <%- include("./components/nav.ejs") %>
+    <div>
+        <h1 class="text-yellow-500 text-5xl font-bold">All Blogs</h1>
+
+    <% if(blogs.length > 0){ %>
+       <% blogs.forEach(blog => { %>
+<h3 class="text-white font-semibold text-xl my-4"><%= blog.title %></h3>
+<p class="text-gray-400"><%= blog.snippet %></p>
+      <% }) %>
+    <% } else { %>
+        <p class="text-white font-xl">There are no blogs to display...</p>
+        <% } %>
+    </div>
+    <%- include("./components/footer.ejs") %>
+
+</body>
+</html>
