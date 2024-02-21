@@ -5,6 +5,9 @@ const app = express();
 // register view engine
 
 app.set("view engine", "ejs");
+app.listen(3007);
+
+app.use(express.static("public"));
 
 app.get("/", (req, res) => {
   const blogs = [
@@ -43,5 +46,3 @@ app.get("/newBlog", (req, res) => {
 app.use((req, res) => {
   res.status(404).render("404", { title: "404" });
 });
-
-app.listen(3007);
