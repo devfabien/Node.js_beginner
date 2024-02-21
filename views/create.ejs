@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devfabien Blogs| <%= title %></title>
+</head>
+<body>
+    <%- include("./components/nav.ejs") %>
+        <div class="create-blog content">
+            <form>
+                <label for="title">Blog title:</label>
+                <input type="text" id="title" required>
+                <label for="snippet">Blog snippet:</label>
+                <input type="text" id="snippet" required>
+                <label for="body">Blog body:</label>
+                <textarea id="title" required></textarea>
+                <button>Submit</button>
+            </form>
+        </div> 
+        <%- include("./components/footer.ejs") %>
+</body>
+</html>
