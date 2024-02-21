@@ -7,6 +7,11 @@ const app = express();
 app.set("view engine", "ejs");
 app.listen(3007);
 
+app.use((req, res, next) => {
+  console.log("in the middleware");
+  next();
+});
+
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
